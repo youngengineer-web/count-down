@@ -1,0 +1,37 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: cadetblue;
+}
+
+body{
+    background: #34343f;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.text{
+    font-size: 23px;
+    padding-bottom: 50px;
+}
+
+.timer{
+    font-size: 30px;
+    background: #3e3e4d;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px -3px #ffffff;
+    margin-bottom: 150px;
+}
+
+.timer span{
+    color: white;
+    font-weight: bold;
+}

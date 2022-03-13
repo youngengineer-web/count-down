@@ -1,5 +1,5 @@
 import React from "react";
-import Timer, { userTime } from "./Timer";
+import Timer from "./Timer";
 import Text from "./Text";
 import './style.css'
 // import InNum from "./InNum"

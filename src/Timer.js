@@ -1,10 +1,12 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
 import './style.css'
-// import { txt } from "./Text";
+import BtnControl from "./btnControl";
+
 
 export var userTime = parseInt(prompt("Enter Your Number"));
 var interval;
+var rstUserTime = userTime;
 
 class Timer extends React.Component {
     constructor() {
@@ -14,26 +16,42 @@ class Timer extends React.Component {
         }
     }
 
+    setTime = () => {
+        this.setState({
+            time: --userTime
+        })
+    }
+
     componentDidMount() {
-        interval = setInterval(() => {
-            this.setState({
-                time: --userTime
-            })
-        }, 1000);
+        interval = setInterval(this.setTime, 1000);
     }
 
     componentDidUpdate() {
         if (this.state.time == 0) {
             clearInterval(interval);
-            // txt = "Your counting is over";
             alert("Time Out!");
         }
     }
 
+    btnStart = () => {
+        interval = setInterval(this.setTime, 1000);
+    }
+
+    btnStop = () => {
+        clearInterval(interval);
+    }
+
+    btnReset = () =>{
+        userTime = rstUserTime;
+    }
+
     render() {
         return (
-            <div className="timer">
-                <span>{this.state.time}</span> left
+            <div className="btn">
+                <div className="timer">
+                    <span>{this.state.time}</span> left
+                </div>
+                <BtnControl btnStart={this.btnStart} btnStop={this.btnStop} btnReset={this.btnReset} />
             </div>
         )
     }

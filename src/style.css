@@ -5,13 +5,8 @@
     color: cadetblue;
 }
 
-body{
+body {
     background: #34343f;
-}
-
-button{
-    width: 60px;
-    height: 23px;
 }
 
 .main {
@@ -22,21 +17,29 @@ button{
     height: 100vh;
 }
 
-.text{
+.text {
     font-size: 23px;
     padding-bottom: 50px;
 }
 
-.timer{
+.timer {
     font-size: 30px;
     background: #3e3e4d;
     padding: 15px;
     border-radius: 50%;
     box-shadow: -3px -3px 5px -3px #ffffff;
-    margin-bottom: 150px;
+    text-align: center;
 }
 
-.timer span{
+.btn button {
+    width: 60px;
+    height: 23px;
+    margin: 30px 5px 150px;
+    background: #3e3e4d;
+    border-radius: 10px;
+}
+
+.timer span {
     color: white;
     font-weight: bold;
 }

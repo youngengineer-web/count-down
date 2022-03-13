@@ -9,6 +9,11 @@ body{
     background: #34343f;
 }
 
+button{
+    width: 60px;
+    height: 23px;
+}
+
 .main {
     display: flex;
     justify-content: center;

@@ -5,25 +5,23 @@ import { userTime } from "./Timer";
 // export var txt = "Your countdown is counting...";
 
 class Text extends React.Component {
-    constructor(){
-        super()
-        this.state = {
-            txt2:"Your countdown is counting..."
-        }
-    }
+    // constructor(){
+    //     super()
+    //     this.state = {
+    //         txt2:"Your countdown is counting..."
+    //     }
+    // }
 
     componentDidUpdate(){
-        if (userTime == 0) {
-            this.setState({
-                txt2:"Your counting is over"
-            })
+        if (userTime == 5) {
+            this.props.editTitle();
         }
     }
 
     render() {
         return (
             <div className="text">
-                {this.state.txt2}
+                {this.props.title}
             </div>
         )
     }

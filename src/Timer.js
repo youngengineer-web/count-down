@@ -16,9 +16,8 @@ class Timer extends React.Component {
 
     componentDidMount() {
         interval = setInterval(() => {
-            userTime--;
             this.setState({
-                time: userTime
+                time: --userTime
             })
         }, 1000);
     }
@@ -26,7 +25,6 @@ class Timer extends React.Component {
     componentDidUpdate() {
         if (this.state.time == 0) {
             clearInterval(interval);
-            { document.getElementById('main').style.background = 'red' };
             // txt = "Your counting is over";
             alert("Time Out!");
         }
